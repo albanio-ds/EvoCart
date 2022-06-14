@@ -1,9 +1,3 @@
-# EvoCart Description 
-
-EvoCart is about creating the fasted railway system from a defined start to a random point on an area by using open-ended algorithms. When the algorithm start, it will generate a noise map which it will use to create rough area and save this area in a separate area for later use (this area will be called "Template"). After the playground done, a destination represented by an emerald block will be randomly generated. Next, The algorithm will generate a random pattern of rails which must follow the "Minecraft rules of rail continuity" so a minecart can go through it at least in one direction. At the first generation, the rail generation will only stop once it reaches the destination. After that, the current pattern is deemed "Shortest Rail" henceforth being replicated in the 3rd area. And then by using the Template, we clear the previous rail system and copy a new version of the "Shortest Rail". However, its generation will be interrupted on the way at a random distance (representing the mutation) and will continue its generation randomly. If this new version arrives at its destination and is shorter, it will become the new "shortest rail" and start anew.
-
-
-
 <div align="center">    
  
 # Evocraft-py  
@@ -36,10 +30,12 @@ A Python interface for Minecraft built on [grpc](https://github.com/real-itu/min
 
 ### 2. Starting the modded Minecraft server
 
-1. From `Evocraft-py` folder, start the server with `java -jar spongevanilla-1.12.2-7.3.0.jar`
-2. The first time you try to start the server a texfile eula.txt with be generated, you need to modify its last line to `eula=true` to accept the Minecraft EULA. Now running `java -jar spongevanilla-1.12.2-7.3.0.jar` will start the server
+1. From `Evocraft-py`, start the server with `java -jar spongevanilla-1.12.2-7.3.0.jar`
+2. The first time you try to start the server a texfile eula.txt with be generated, you need to modifying its last line to `eula=true` to accept the Minecraft EULA. Now running `java -jar spongevanilla-1.12.2-7.3.0.jar` will start the server
 3. You should see a bunch of outputs including `[... INFO]: Listening on 5001`. 
 This means it's working and the Minecraft server is ready for commands on port 5001.
+
+**Note**: if you get an SSL error in step 1, try another connection (Institutions like labs can block access).
 	
 
 ### 3. Spawn blocks on the Minecraft server with Python 
@@ -144,16 +140,13 @@ On the server command line, you can use /tp @p x y z to teleport yourself to pos
 
 </br>  
 
-# Research projects using the EvoCraft API
+# Evolutionary algorithms implemented with the API
 
 In this section we'll compile implementations of evolutionary algorithms using the API
 
  - [**Interactive evolution**](https://github.com/claireaoi/EvoCraft-interactive): Evolve Minecraft entities interactively.
  - [**Simple tower evolution in Python**](https://github.com/real-itu/simple_minecraft_evolver): Evolve tower that reach for a golden block in the sky.
- - [**Evocraft 2021 winner**](https://github.com/GoodAI/EvocraftEntry): Novelty search and automated designer approaches to redstone circuit discovery.
- - [**Meta-Diversity Search in Complex Systems,
-A Recipe for Artificial Open-Endedness**](https://github.com/mayalenE/evocraftsearch/)
- - [**Open-ended creation of hybrid creatures with Neural Cellular Automata**](https://github.com/hugcis/hybrid-nca-evocraft)
+
 
 
 </br>  
